@@ -73,12 +73,14 @@ $stmt_amigos->close();
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Perfil de <?php echo htmlspecialchars($usuario['nome']); ?></title>
     <link rel="stylesheet" href="./css/perfil.css">
 
 </head>
+
 <body>
     <header id="header">
         <div id="container">
@@ -88,20 +90,20 @@ $stmt_amigos->close();
                     <li>
                         <h3><a id="inicio" href="./feed.php">Feed</a></h3>
                     </li>
-                    
+
                     <li>
                         <h3><a id="perfil" href="./perfil.php">Perfil</a></h3>
                     </li>
                 </ul>
                 <div id="user-div">
-                <?php
-             
+                    <?php
 
-                if (isset($_SESSION['nome']) && $_SESSION['nome'] != '') {
-                    $fotoPerfil = isset($_SESSION['foto_perfil']) && $_SESSION['foto_perfil'] != '' 
-                        ? $_SESSION['foto_perfil'] 
-                        : './img/user_default.jpg';
-                    echo "
+
+                    if (isset($_SESSION['nome']) && $_SESSION['nome'] != '') {
+                        $fotoPerfil = isset($_SESSION['foto_perfil']) && $_SESSION['foto_perfil'] != ''
+                            ? $_SESSION['foto_perfil']
+                            : './img/user_default.jpg';
+                        echo "
                     <div class='user-menu'>
                         <button id='user-btn'>
                             <img class='user-foto' src='{$fotoPerfil}' alt='Foto de Perfil'>
@@ -125,56 +127,58 @@ $stmt_amigos->close();
                             </div>
                         </div>
                     </div>
-                    ";                    
-                } else {
-                    echo "<h3><a id='login' href='./index.php'>Entrar</a></h3>";
-                }
-                ?>
+                    ";
+                    } else {
+                        echo "<h3><a id='login' href='./index.php'>Entrar</a></h3>";
+                    }
+                    ?>
                 </div>
 
             </nav>
         </div>
     </header>
 
-    
-<div class="profile-container">
-    <h2>Perfil de <?php echo htmlspecialchars($usuario['nome']); ?></h2>
-    <div class="sidebar">
-        <img src="<?php echo !empty($usuario['foto_perfil']) ? htmlspecialchars($usuario['foto_perfil']) : 'padrao.png'; ?>" alt="Foto de perfil">
-        <h2><?php echo htmlspecialchars($usuario['nome']); ?></h2>
-        <p><?php echo htmlspecialchars($usuario['email']); ?></p>
-    </div>
+  <h2 class="h2-perfil">Perfil de <?php echo htmlspecialchars($usuario['nome']); ?></h2>
+    <div class="profile-container">
+      
+        <div class="sidebar">
+            <img src="<?php echo !empty($usuario['foto_perfil']) ? htmlspecialchars($usuario['foto_perfil']) : 'padrao.png'; ?>" alt="Foto de perfil">
+            <h2><?php echo htmlspecialchars($usuario['nome']); ?></h2>
+            <p><?php echo htmlspecialchars($usuario['email']); ?></p>
+        </div>
 
-    <div class="main-content">
-        <form  action="update_foto.php" method="POST" enctype="multipart/form-data">
-            <label>Nome:</label>
-            <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required>
+        <div class="main-content">
+            <form action="update_foto.php" method="POST" enctype="multipart/form-data">
 
-            <label>Email:</label>
-            <input type="email" name="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required>
+                <label>Nome:</label>
+                <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required>
 
-            <label>Foto de perfil:</label>
-            <input type="file" name="foto_perfil" accept="image/*">
+                <label>Email:</label>
+                <input type="email" name="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required>
 
-            <button type="submit">Salvar alterações</button>
-        </form>
+                <label>Foto de perfil:</label>
+                <input type="file" name="foto_perfil" accept="image/*">
 
-        <div class="amigos">
-            <h3>Amigos</h3>
-            <?php if ($amigos_result->num_rows > 0): ?>
-                <?php while ($amigo = $amigos_result->fetch_assoc()): ?>
-                    <div class="amigo">
-                        <img src="<?php echo !empty($amigo['foto_perfil']) ? htmlspecialchars($amigo['foto_perfil']) : 'padrao.png'; ?>" alt="Foto do amigo">
-                        <span><?php echo htmlspecialchars($amigo['nome']); ?></span>
-                    </div>
-                <?php endwhile; ?>
-            <?php else: ?>
-                <p>Você ainda não tem amigos adicionados.</p>
-            <?php endif; ?>
+                <button type="submit">Salvar alterações</button>
+            </form>
+
+            <div class="amigos">
+                <h3>Amigos</h3>
+                <?php if ($amigos_result->num_rows > 0): ?>
+                    <?php while ($amigo = $amigos_result->fetch_assoc()): ?>
+                        <div class="amigo">
+                            <img src="<?php echo !empty($amigo['foto_perfil']) ? htmlspecialchars($amigo['foto_perfil']) : 'padrao.png'; ?>" alt="Foto do amigo">
+                            <span><?php echo htmlspecialchars($amigo['nome']); ?></span>
+                        </div>
+                    <?php endwhile; ?>
+                <?php else: ?>
+                    <p>Você ainda não tem amigos adicionados.</p>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
-</div>
 
 
 </body>
+
 </html>
