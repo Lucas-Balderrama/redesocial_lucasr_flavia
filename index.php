@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input type='checkbox' onclick='mostrarSenha()'> Mostrar senha
                 </div> 
                 <input id="entrar" type="submit" value="Entrar">
-                <p class="celular">Não possui uma conta? <a href="cadastro.php">Cadastre-se!</a></p>
+                <p class="celular">Não possui uma conta? <a href="cadastro.php">Cadastre-se</a></p>
             </form>
         </div>
     </section>

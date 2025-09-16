@@ -65,20 +65,6 @@ header {
     align-items: center;
     list-style: none;
 }
-#user{
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    color: #0e3960;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    text-transform: uppercase;
-    cursor: pointer;
-    height: 30px;
-    margin-top: 7px;
-    align-self: center;
-}
 #opt-nome{
     display: none;
 }
@@ -137,13 +123,77 @@ a:hover{
     margin-right: 10%;
 }
 
-#nav2{ 
+/* modal */
+/* botão do usuário */
+#user-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.user-foto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* modal escondido por padrão */
+.modal {
     display: none;
-    position: absolute;
-    background-color: rgba(216, 219, 220, 0.707);
+    position: fixed;
     top: 70px;
-    right: 0;
-    width: 200px;
-    z-index: 1; 
-    border: solid 5px rgba(217, 217, 217, 0.886);
+    right: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* conteúdo */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-foto-modal {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.user-info .info h3 {
+    margin: 0;
+}
+
+.user-info .info a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.logout {
+    text-align: right;
+}
+
+.logout a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+/* botão fechar (opcional) */
+#close-modal {
+    cursor: pointer;
+    font-size: 20px;
+    float: right;
 }
