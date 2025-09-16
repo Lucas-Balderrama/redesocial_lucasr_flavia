@@ -19,21 +19,31 @@
                     <li>
                         <h3><a id="inicio" href="./index.php">Feed</a></h3>
                     </li>
-                    
+
                     <li>
                         <h3><a id="perfil" href="./perfil.php">Perfil</a></h3>
                     </li>
                 </ul>
                 <div id="user-div">
-                <?php
-                include 'conexao.php';
-                session_start();
+                    <?php
+                    include 'conexao.php';
+                    session_start();
 
-                if (isset($_SESSION['nome']) && $_SESSION['nome'] != '') {
-                    $fotoPerfil = isset($_SESSION['foto_perfil']) && $_SESSION['foto_perfil'] != '' 
-                        ? $_SESSION['foto_perfil'] 
-                        : './img/user_default.jpg';
-                    echo "
+                    $id = $_SESSION['id_usuario'];
+                    $sql = "SELECT foto_perfil FROM usuarios WHERE id_usuario = ?";
+                    $stmt = $conexao->prepare($sql);
+                    $stmt->bind_param("i", $id);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+                    $usuario = $result->fetch_assoc();
+
+                    $fotoPerfil = !empty($usuario['foto_perfil']) ? $usuario['foto_perfil'] : './img/user_default.jpg';
+
+                    if (isset($_SESSION['nome']) && $_SESSION['nome'] != '') {
+                        $fotoPerfil = isset($_SESSION['foto_perfil']) && $_SESSION['foto_perfil'] != ''
+                            ? $_SESSION['foto_perfil']
+                            : './img/user_default.jpg';
+                        echo "
                     <div class='user-menu'>
                         <button id='user-btn'>
                             <img class='user-foto' src='{$fotoPerfil}' alt='Foto de Perfil'>
@@ -57,11 +67,11 @@
                             </div>
                         </div>
                     </div>
-                    ";                    
-                } else {
-                    echo "<h3><a id='login' href='./index.php'>Entrar</a></h3>";
-                }
-                ?>
+                    ";
+                    } else {
+                        echo "<h3><a id='login' href='./index.php'>Entrar</a></h3>";
+                    }
+                    ?>
                 </div>
 
             </nav>

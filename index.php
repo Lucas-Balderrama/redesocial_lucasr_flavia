@@ -19,9 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['id_usuario'] = $usuario_logado['id_usuario'];
             $_SESSION['nome'] = $usuario_logado['nome'];
 
+            $_SESSION['foto_perfil'] = !empty($usuario_logado['foto_perfil'])
+                ? $usuario_logado['foto_perfil']
+                : './img/user_default.jpg';
+
             $url_anterior = isset($_SESSION['url_anterior']) ? $_SESSION['url_anterior'] : 'feed.php';
-            unset($_SESSION['url_anterior']); 
-            
+            unset($_SESSION['url_anterior']);
+
             header("Location: $url_anterior");
             exit;
         } else {
@@ -35,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <section id="secao-login">
         <div id="box-login">
@@ -61,24 +67,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <label for="senha">Senha</label>
                 <input class="inserir" id="senha-campo" name="senha" type="password" required>
-                
+
                 <div id='mostrar'>
-                        <input type='checkbox' onclick='mostrarSenha()'> Mostrar senha
-                </div> 
+                    <input type='checkbox' onclick='mostrarSenha()'> Mostrar senha
+                </div>
                 <input id="entrar" type="submit" value="Entrar">
                 <p class="celular">Não possui uma conta? <a href="cadastro.php">Cadastre-se</a></p>
             </form>
         </div>
     </section>
     <script>
-    function mostrarSenha() {
-        var x = document.getElementById("senha-campo");
-        if (x.type === "password") {
-            x.type = "text";
-        } else {
-            x.type = "password";
+        function mostrarSenha() {
+            var x = document.getElementById("senha-campo");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
         }
-    }
     </script>
 </body>
+
 </html>
