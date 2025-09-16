@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $senha_hashed = password_hash($senha, PASSWORD_DEFAULT);
 
-    $sql_insercao = "INSERT INTO usuarios (nome_usuario, email_usuario, senha_usuario, tipo_usuario) VALUES (?, ?, ?, 'cliente')";
+    $sql_insercao = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)";
     $stmt = $conexao->prepare($sql_insercao);
     $stmt->bind_param("sss", $nome, $email, $senha_hashed);
 
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         
                 <button id="botao-cadastrar" type="submit">Cadastrar</button>
         
-                <p class="celular2">Já possui uma conta? <a href="./login.php">Entre!</a></p>
+                <p class="celular2">Já possui uma conta? <a href="./index.php">Entrar</a></p>
             </form>
         </div>
     </section>
