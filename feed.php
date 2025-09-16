@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/nexa_logo_icone.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/feed.css">
+    <link rel="stylesheet" href="./css/nav.css">
     <script src="./js/feed.js"></script>
     <title>Feed</title>
 </head>
@@ -56,13 +56,13 @@
                                 <div class='user-info'>
                                     <img class='user-foto-modal' src='{$fotoPerfil}' alt='Foto de Perfil'>
                                     <div class='info'>
-                                        <h3>{$_SESSION['nome']}</h3>
-                                        <a href='./perfil.php'>Acessar Perfil</a>
+                                        <h3 id='nome-modal' >{$_SESSION['nome']}</h3>
+                                        <a id='link-modal' href='./perfil.php'>Acessar Perfil</a>
                                     </div>
                                 </div>
                                 
                                 <div class='logout'>
-                                    <a href='logout.php'>Sair</a>
+                                    <a id='sair-modal' href='logout.php'>Sair</a>
                                 </div>
                             </div>
                         </div>
@@ -77,6 +77,16 @@
             </nav>
         </div>
     </header>
-</body>
 
+    <div class="feed">
+        <div class="publicar">
+            <label>No que você está pensando?</label>
+            <input placeholder="Faça sua publicação aqui!" type="text">
+        </div>
+
+        <div class="publicacoes">
+            <div class="div"><p>oiii</p></div>
+        </div>
+    </div>
+</body>
 </html>

@@ -3,13 +3,11 @@
 session_start();
 include 'conexao.php';
 
-// Verifica se o usuário está logado
 if (!isset($_SESSION['id_usuario'])) {
     header("Location: login.php");
     exit;
 }
 
-// Verifica se um arquivo foi enviado
 if (isset($_FILES['foto_perfil']) && $_FILES['foto_perfil']['error'] == 0) {
     $id_usuario = $_SESSION['id_usuario'];
 
