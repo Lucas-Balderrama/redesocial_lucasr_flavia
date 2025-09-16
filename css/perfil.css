@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,30 +8,20 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background: #0e3960;
-  background: radial-gradient(
-    circle,
-    rgba(14, 57, 96, 1) 0%,
-    rgba(30, 41, 59, 1) 100%
-  );
+  background: radial-gradient(circle, rgba(14,57,96,1) 0%, rgba(30,41,59,1) 100%);
   color: #1e293b;
 }
 
 header {
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   color: #0e3960;
   padding: 10px;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 50;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
   transition: all 0.4s ease;
-}
-
-#header.ativo {
-  top: -95px;
-  opacity: 0;
 }
 
 #container {
@@ -40,21 +31,24 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 #box-img {
   width: 180px;
   height: 70px;
   display: flex;
   align-items: center;
 }
+
 .logo {
   width: 140px;
-  float: left;
 }
+
 #nav1 {
   margin-left: 8%;
   display: flex;
   justify-content: center;
 }
+
 #login {
   color: #0e3960;
   text-decoration: none;
@@ -63,19 +57,23 @@ header {
   font-family: "Plus Jakarta Sans", sans-serif;
   text-transform: uppercase;
 }
+
 #user-div {
   display: flex;
   align-items: center;
   list-style: none;
 }
+
 #opt-nome {
   display: none;
 }
+
 #opt-sair {
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   font-weight: 600;
   cursor: pointer;
 }
+
 header nav {
   display: flex;
   flex-direction: row;
@@ -144,7 +142,7 @@ a:hover {
   right: 20px;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   padding: 20px;
   z-index: 1000;
 }
@@ -198,26 +196,41 @@ a:hover {
 #nav2 {
   display: none;
   position: absolute;
-  background-color: rgba(216, 219, 220, 0.707);
+  background-color: rgba(216,219,220,0.707);
   top: 70px;
   right: 0;
   width: 200px;
   z-index: 1;
-  border: solid 5px rgba(217, 217, 217, 0.886);
+  border: solid 5px rgba(217,217,217,0.886);
+}
+.h2-perfil {
+  color: #fff;
+  text-align: center; 
+  font-size: 2.2rem; 
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 20px 0 40px 0; 
+  position: relative;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #f1f5f9;
+.h2-perfil::after {
+  content: '';
+  display: block;
+  width: 300px;
+  height: 4px;
+  background: #e2e8f0;
+  margin: 10px auto 0; 
+  border-radius: 2px;
 }
+
+
 .profile-container {
-  display: flex;
+  display: flex; 
   gap: 40px;
   max-width: 1100px;
-  margin: 40px auto;
+  margin: 0 auto 40px auto;
   padding: 0 20px;
-  flex-wrap: wrap;
 }
 
 .sidebar {
@@ -226,7 +239,7 @@ h2 {
   border-radius: 12px;
   width: 280px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .sidebar img {
@@ -261,7 +274,7 @@ form {
   background: #fff;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 form label {
@@ -302,7 +315,7 @@ form button:hover {
   background: #fff;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .amigos h3 {
@@ -339,8 +352,8 @@ form button:hover {
 
 @media (max-width: 768px) {
   .profile-container {
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    padding: 0 10px;
   }
 
   .sidebar {
@@ -350,15 +363,5 @@ form button:hover {
 
   .main-content {
     width: 100%;
-  }
-
-  header nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #nav1 {
-    flex-direction: column;
-    gap: 10px;
   }
 }
