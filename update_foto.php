@@ -1,3 +1,4 @@
+<!-- Lucas Randal e Flavia -->
 <?php
 session_start();
 include 'conexao.php';
