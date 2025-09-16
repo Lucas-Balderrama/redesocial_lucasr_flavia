@@ -68,9 +68,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="senha">Senha</label>
                 <input class="inserir" id="senha-campo" name="senha" type="password" required>
 
-                <div id='mostrar'>
-                    <input type='checkbox' onclick='mostrarSenha()'> Mostrar senha
+                <div id="mostrar">
+                    <input type="checkbox" onclick="mostrarSenha()">
+                    <label for="mostrar-senha">Mostrar senha</label>
+                    <a class="esqueceuSenha" href="esqueceu_senha.php">Esqueci minha senha</a>
                 </div>
+
                 <input id="entrar" type="submit" value="Entrar">
                 <p class="celular">Não possui uma conta? <a href="cadastro.php">Cadastre-se</a></p>
             </form>
