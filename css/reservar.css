@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(243, 241, 241);
+    font-size:x-large;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* cabeçalho */
+header {
+    background-color: rgb(255, 255, 255);
+    color: #0e3960;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.4s ease;
+}
+
+#header.ativo{
+    top: -95px;
+    opacity: 0;
+}
+
+#container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#box-img{
+    width: 180px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 140px;
+    float: left;
+}
+#nav1{
+    margin-left: 8%;
+    display: flex;
+    justify-content: center;
+}
+#login{
+    color: #0e3960;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+}
+#user-div{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+#user{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #0e3960;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    height: 30px;
+    margin-top: 7px;
+    align-self: center;
+}
+#opt-nome{
+    display: none;
+}
+#opt-sair{
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: #0e3960;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    margin: 0 3vw;
+}
+
+a{
+    transition: color 0.3s;
+}
+
+a:hover{
+    color:#297caf;
+}
+
+
+#checkbox{
+    display: none;
+}
+
+#botao{
+    display: none;
+    font-size: 40px;
+    color:#00304D;
+    cursor: pointer;
+    float: right;
+    margin-right: 10%;
+}
+
+#nav2{ 
+    display: none;
+    position: absolute;
+    background-color: rgba(216, 219, 220, 0.707);
+    top: 70px;
+    right: 0;
+    width: 200px;
+    z-index: 1; 
+    border: solid 5px rgba(217, 217, 217, 0.886);
+}
+/* fim cabeçalho */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 80px;
+}
+
+.area-reserva {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+
+#h2-titulo {
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+}
+
+form {
+    padding: 20px;
+    border-radius: 10px; 
+    width: 400px;
+    display: block;
+}
+
+label {
+    font-size: 15px;
+}
+
+select {
+    border: 2px solid rgb(180, 180, 180);
+    font-size: 17px;
+    border-radius: 8px;
+    width: 98.2%;
+    padding: 6px;
+    margin-bottom: 10px;
+    background-color:white;
+}
+
+input {
+    width: 95%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 2px solid rgb(180, 180, 180);
+    font-size: 17px;
+    border-radius: 8px;
+    background-color:white;
+}
+
+#btn-reserva {
+    width: 98%;
+    background-color: #467ba3;
+    padding: 7px;
+    margin-top: 10px;
+    margin-bottom: -15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Outfit", sans-serif;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#btn-reserva:hover {
+    background-color: #92c3e8;
+}
+
+#botao{
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    float: right;
+    margin-right: 10%;
+}
+
+.esconder{
+    display: none;
+}
+
+.radio {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    margin-top: 100px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.checkbox input[type="radio"] {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox label {
+    font-size: 16px;
+    margin: 0; 
+}
+
+.checkbox img {
+    height: 40px;
+    margin: 0;
+}
+/* footer */
+footer {
+    background-color:rgba(99, 149, 187, 1);
+    width: 100%;
+    color: white;
+    margin-top: 60px;
+}
+
+#footer {
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+footer h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer p, footer a {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 3px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #092c4f;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+ 
+.contato {
+    margin-top: 5px;
+}
+@media (max-width: 768px) {
+    #nav1{
+        display: none;
+    }
+    nav{
+        justify-content:right;
+    }
+    #user-div{
+        margin-right: 20px;
+    }
+    #opt-sair{
+        font-size: 12px;
+        width: 30px;
+    }
+    #botaonav{
+        display: block;
+    }
+    .logo{
+        margin-left: 5%;
+    }
+    #footer {
+        display: block;
+        overflow-wrap: break-word;
+        padding: 25px;
+    }
+    #footer h2{
+        font-size: 24px;
+    }
+    #footer p{
+        font-size: 13px;
+    }
+    .area-reserva {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .bloco-reserva {
+        padding: 15px;
+        width: 300px;
+    }
+    form {
+        width: 250px;
+    }
+    .container {
+        padding: 20px 20px;
+    }
+    .checkbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #forma-pagamento h2{
+        text-align: center;
+        margin-bottom: 40px;
+     }
+     #btn-reserva {
+        margin-top: 40px;
+        margin-bottom: 4px;
+    }
+}
+@media (max-width: 768px) {
+    #user{
+        font-size: 10px;
+    }
+    #nav1{
+        display: none;
+    }
+    #botao{
+        display: block;
+        color: black;
+    }
+    #checkbox:checked + #botao + #nav2{
+        display: block;
+    }
+    .logo{
+        margin-left: 5%;
+    }
+}

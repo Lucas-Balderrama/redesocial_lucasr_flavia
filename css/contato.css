@@ -1,0 +1,497 @@
+/* pagina */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #cdcfd8;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    color: #0e3960;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.4s ease;
+}
+
+#header.ativo{
+    top: -95px;
+    opacity: 0;
+}
+
+#container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#box-img{
+    width: 180px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 140px;
+    float: left;
+}
+#nav1{
+    margin-left: 8%;
+    display: flex;
+    justify-content: center;
+}
+#login{
+    color: #0e3960;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+}
+#user-div{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+#user{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #0e3960;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    height: 30px;
+    margin-top: 7px;
+    align-self: center;
+}
+#opt-nome{
+    display: none;
+}
+#opt-sair{
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: #0e3960;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    margin: 0 3vw;
+}
+
+a{
+    transition: color 0.3s;
+}
+
+a:hover{
+    color:#297caf;
+}
+
+
+#checkbox{
+    display: none;
+}
+
+#botao{
+    display: none;
+    font-size: 40px;
+    color:#00304D;
+    cursor: pointer;
+    float: right;
+    margin-right: 10%;
+}
+
+#nav2{ 
+    display: none;
+    position: absolute;
+    background-color: rgba(216, 219, 220, 0.707);
+    top: 70px;
+    right: 0;
+    width: 200px;
+    z-index: 1; 
+    border: solid 5px rgba(217, 217, 217, 0.886);
+}
+
+
+/* fim cabeçalho */
+/* form */
+#esteja_logado{
+    color: rgb(77, 77, 81);
+    font-size: 14.53px;
+}
+form{
+    padding: 20px;
+    width: 400px;
+    margin: auto;
+    display: block;
+    margin-bottom: 140px;
+}
+
+label{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+form h2{
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+             rgba(0, 0, 0, 0.3) 0px 7px 13px, 
+             rgba(0, 0, 0, 0.2) 0px -3px 0px;
+             margin-bottom: 40px;
+             margin-top: 10px;
+}
+#contato a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+input{
+    width: 95%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: solid #b4b4b4 2px;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: rgba(217, 217, 217, 1);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.211) 0px 2px 4px, rgba(0, 0, 0, 0.211) 0px 7px 13px -3px, rgba(0, 0, 0, 0.085) 0px -3px 0px inset;
+}
+#comentario{
+    height: 20px;
+    padding-bottom: 90px;
+}
+
+input::placeholder {
+    position: absolute;
+    top: 5px; 
+
+  }
+.formulario{
+    margin-top: 15px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+#entrar{
+    width: 40%;
+    height: 52px;
+    background-color: rgba(217, 217, 217, 1);
+    margin-top: 6px;
+    border: solid #00304D 0.7px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #00304D;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.182) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.073) 0px -3px 0px inset;
+}
+
+#entrar:hover{
+    color: white;
+    background-color: #00304D;
+}
+#centralizar{
+    margin-left: 47%;
+    margin-top: 90px;
+    margin-bottom: 100px;
+
+}
+/* fim forms */
+/* caixinhas de contato */
+#contato{
+    position: relative;
+    width: 500px;
+    height: 470px;
+    background-color: #5d89c7;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#contato p, #contato h3{
+    margin: 12px;
+}
+#contato h3{
+    font-family: 'Montserrat', sans-serif;
+}
+#contato p{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.caixinhaContato {
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background-color: white;
+    color: #000;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 17px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    
+}
+
+.caixinhaContato ul li {
+    list-style: none;
+}
+#insta-smart:hover, .caixinhaContato ul li a:hover{
+    font-weight: bold;
+}
+#insta {
+    right: 735px;
+}
+
+#email {
+    right: 500px;
+}
+
+#equipe {
+    bottom: 30px;
+    right: 735px;
+}
+.fa-location-dot, .fa-users, #iconInsta, .fa-envelope{
+    font-size: 50px;
+    margin-top: 15px;
+}
+#local{
+    bottom: 30px;
+    right: 500px;
+}
+/* fim caixinhas de contato */
+/* footer */
+footer {
+    background-color:rgba(99, 149, 187, 1);
+    width: 100%;
+    color: white;
+    margin-top: 60px;
+}
+
+#footer {
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+footer h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer p, footer a {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 3px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #092c4f;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+ 
+.contato {
+    margin-top: 5px;
+}
+@media (max-width: 768px) {
+    #nav1{
+        display: none;
+    }
+    #botao{
+        display: block;
+    }
+    #checkbox:checked + #botao + #nav2{
+        display: block;
+    }
+    .logo{
+        margin-left: 5%;
+    }
+    #footer {
+        display: block;
+        overflow-wrap: break-word;
+        padding: 25px;
+        margin-top: 1200px;
+    }
+    #footer h2{
+        font-size: 24px;
+    }
+    #footer p{
+        font-size: 13px;
+    }
+    #hotel{
+        font-size: 35px;
+        margin-top: 20px;
+    }
+    .flex a{
+        margin-top: 9px;
+    }
+    .flex p{
+        margin-bottom: 30px;
+    }
+    .fa-solid{
+        font-size: 55px;
+    }
+    /* caixinhas de contato */
+    #contato{
+        width: 250px;
+        height: 390px;
+        background-color: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0) 0px 19px 38px, rgba(0, 0, 0, 0) 0px 15px 12px;
+        border: solid #1e5aba 2px;
+        border-radius: 10px;
+    }
+    .caixinhaContato {
+        width: 290px;
+        height: 230px;
+        background-color: white;
+        color: #000;
+        box-shadow: rgba(0, 0, 0, 0) 0px 2px 4px, rgba(0, 0, 0, 0) 0px 7px 13px -3px, rgba(0, 0, 0, 0) 0px -3px 0px inset;
+        border: solid #1e5aba 2px;
+    }
+    #insta {
+        right: 0px;
+        bottom: -530px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    #equipe {
+        bottom: -300px;
+        right: 0px;
+        border-bottom: solid #ffffff 2px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    #email {
+        right: 0px;
+        bottom: -850px;
+        border-bottom: solid #ffffff 2px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    #local{
+        right: 0px;
+        bottom: -1080px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .fa-location-dot, .fa-users, #iconInsta, .fa-envelope{
+        font-size: 50px;
+        margin-top: 35px;
+    }
+    
+    /* form */
+    form{
+        padding: 0px;
+        padding-left: 10px;
+        width: 75%;
+    }
+    form h2{
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: black;
+        text-shadow: rgba(0, 0, 0, 0) 0px 2px 4px, 
+        rgba(0, 0, 0, 0) 0px 7px 13px, 
+        rgba(0, 0, 0, 0) 0px -3px 0px;
+    }
+    #comentario{
+        height: 20px;
+        padding-bottom: 70px;
+    }
+    #esteja_logado{
+        font-size: 11.4px;
+    }
+    #entrar{
+        width: 45%;
+        height: 40px;
+        margin-top: 0px;
+        font-size: 20px;
+        background-color: rgb(255, 255, 255);
+        border: solid #1e5aba 2px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0) 0px 2px 4px, rgba(0, 0, 0, 0) 0px 7px 13px -3px, rgba(0, 0, 0, 0) 0px -3px 0px inset;
+    }
+
+    #contato a{
+        color: black;
+    }
+    #centralizar{
+        margin-left: 23%;
+    }
+    .formulario{
+        margin-top: 10px;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+    }
+    #centralizar{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 90px;
+        margin-bottom: 100px;
+    
+    }
+    input{
+        border: solid #1e5aba 2px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(0, 0, 0, 0) 0px 2px 4px, rgba(0, 0, 0, 0) 0px 7px 13px -3px, rgba(0, 0, 0, 0) 0px -3px 0px inset;
+    }
+    input::placeholder {
+        font-size: 15px;
+    
+      }
+      #user{
+        font-size: 10px;
+    }
+}
+
