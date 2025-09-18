@@ -13,8 +13,6 @@ body {
   
 }
 
-
-/* ===== TÍTULO PERFIL ===== */
 .h2-perfil {
   color: #fff;
   text-align: center; 
@@ -36,7 +34,6 @@ body {
   border-radius: 2px;
 }
 
-/* ===== PERFIL ===== */
 .profile-container {
   display: flex; 
   gap: 40px;
