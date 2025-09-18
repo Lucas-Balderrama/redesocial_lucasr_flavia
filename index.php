@@ -59,6 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <section id="secao-login">
         <div id="box-login">
+            <img class ="logo_login" src="./img/nexa_logo.png" alt="Logo Nexa">
             <form action="" method="POST">
                 <h1>Entre na sua conta</h1>
 

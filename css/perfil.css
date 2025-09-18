@@ -10,199 +10,11 @@ body {
   font-family: "Inter", sans-serif;
   background: radial-gradient(circle, rgba(14,57,96,1) 0%, rgba(30,41,59,1) 100%);
   color: #1e293b;
+  
 }
 
-header {
-  background-color: #fff;
-  color: #0e3960;
-  padding: 10px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
-  transition: all 0.4s ease;
-}
 
-#container {
-  max-width: 1300px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#box-img {
-  width: 180px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  width: 140px;
-}
-
-#nav1 {
-  margin-left: 8%;
-  display: flex;
-  justify-content: center;
-}
-
-#login {
-  color: #0e3960;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 600;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  text-transform: uppercase;
-}
-
-#user-div {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-#opt-nome {
-  display: none;
-}
-
-#opt-sair {
-  background-color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-header nav {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  justify-content: space-between;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-header nav ul li {
-  padding: 10px;
-}
-
-header nav ul li a {
-  color: #0e3960;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: bold;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  text-transform: uppercase;
-  margin: 0 3vw;
-}
-
-a {
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: #297caf;
-}
-
-#checkbox {
-  display: none;
-}
-
-#botao {
-  display: none;
-  font-size: 40px;
-  color: #00304d;
-  cursor: pointer;
-  float: right;
-  margin-right: 10%;
-}
-
-#user-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.user-foto {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 70px;
-  right: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  padding: 20px;
-  z-index: 1000;
-}
-
-.modal-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.user-foto-modal {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  font-weight: bold;
-}
-
-.user-info .info h3 {
-  margin: 0;
-}
-
-.user-info .info a {
-  font-size: 14px;
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-}
-
-.logout {
-  text-align: right;
-}
-
-.logout a {
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
-}
-
-#close-modal {
-  cursor: pointer;
-  font-size: 20px;
-  float: right;
-}
-
-#nav2 {
-  display: none;
-  position: absolute;
-  background-color: rgba(216,219,220,0.707);
-  top: 70px;
-  right: 0;
-  width: 200px;
-  z-index: 1;
-  border: solid 5px rgba(217,217,217,0.886);
-}
+/* ===== TÍTULO PERFIL ===== */
 .h2-perfil {
   color: #fff;
   text-align: center; 
@@ -224,12 +36,12 @@ a:hover {
   border-radius: 2px;
 }
 
-
+/* ===== PERFIL ===== */
 .profile-container {
   display: flex; 
   gap: 40px;
   max-width: 1100px;
-  margin: 0 auto 40px auto;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
@@ -270,7 +82,8 @@ a:hover {
   gap: 40px;
 }
 
-form {
+form,
+.amigos {
   background: #fff;
   padding: 30px;
   border-radius: 12px;
@@ -311,13 +124,6 @@ form button:hover {
   background-color: #1e293b;
 }
 
-.amigos {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
 .amigos h3 {
   font-size: 1.2rem;
   margin-bottom: 20px;
@@ -350,10 +156,22 @@ form button:hover {
   font-size: 0.95rem;
 }
 
+
 @media (max-width: 768px) {
+  #header #container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
   .profile-container {
-    width: 100%;
-    padding: 0 10px;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .sidebar {

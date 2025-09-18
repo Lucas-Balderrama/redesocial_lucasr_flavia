@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt = $conexao->prepare($sql_insercao);
     $stmt->bind_param("sss", $nome, $email, $senha_hashed);
 
-        
+
     if ($stmt->execute()) {
         header("Location: index.php");
     } else {
@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,9 +42,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/login.css">
 </head>
-<body>
+
+<body class="body-cadastro">
     <section class="secao-cadastro">
+        <a href="index.php" class="botao-voltar">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
         <div class="box-cadastro">
+            <img class="logo_login" src="./img/nexa_logo_branca-removebg-preview.png" alt="Logo Nexa">
             <form action="" method="POST">
                 <h1>Cadastre-se</h1>
                 <label for="nome">Nome</label>
@@ -55,24 +61,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <label for="senha">Senha</label>
                 <input class="inserir" id="senha-campo" type="password" name="senha">
                 <div id='mostrar2'>
-                        <input type='checkbox' onclick='mostrarSenha()'> Mostrar senha
-                </div> 
-        
+                    <input type='checkbox' onclick='mostrarSenha()'> Mostrar senha
+                </div>
+
                 <button id="botao-cadastrar" type="submit">Cadastrar</button>
-        
+
                 <p class="celular2">Já possui uma conta? <a href="./index.php">Entrar</a></p>
             </form>
         </div>
     </section>
     <script>
-    function mostrarSenha() {
-        var x = document.getElementById("senha-campo");
-        if (x.type === "password") {
-            x.type = "text";
-        } else {
-            x.type = "password";
+        function mostrarSenha() {
+            var x = document.getElementById("senha-campo");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
         }
-    }
     </script>
 </body>
+
 </html>

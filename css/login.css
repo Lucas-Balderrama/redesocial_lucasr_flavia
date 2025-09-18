@@ -1,237 +1,290 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    height: 100vh;
-    background-color: #e2e8f0;
-    background-size: cover;
-    
+  font-family: "Plus Jakarta Sans", sans-serif;
+  height: 100vh;
+  background-color: #e2e8f0;
+  background-size: cover;
 }
+.logo_login {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 150px;
+  height: auto;
+}
+
 #secao-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 485px;
-    max-width: 95%;
-    margin: auto;
-    height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 485px;
+  max-width: 95%;
+  margin: auto;
+  height: 100vh;
 }
 
 #box-login {
-    position: relative;
-    background-color: #dde8f1;
-    border-radius: 12px;
-    padding: 70px 60px 60px 60px;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-                rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}#box-login h1 {
-    font-size: 36px;
-    color: #0e3960;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 40px;
-    text-align: center;
+  position: relative;
+  background-color: #dde8f1;
+  border-radius: 12px;
+  padding: 70px 60px 60px 60px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#box-login h1 {
+  font-size: 36px;
+  color: #0e3960;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 #box-login p {
-    text-align: center;
-    margin-top: 8px;
-    font-size: 18px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 18px;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 #box-login label {
-    font-weight: bold;
-    font-size: 20px;
-    text-align: left;
-    color: #0e3960;
-    margin: 10px 0 5px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+  color: #0e3960;
+  margin: 10px 0 5px;
 }
 .inserir {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-bottom: 2px solid #a3a2a2;
-    font-size: 16px;
-    background-color: #ffffff00;
-    color: black;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid #a3a2a2;
+  font-size: 16px;
+  background-color: #ffffff00;
+  color: black;
 }
 #entrar {
-    background-color: #dde8f1;
-    border: none;
-    border-radius: 20px;
-    padding: 14px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 230px;
-    margin-top: 40px;
-    margin-bottom: 45px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
+  background-color: #dde8f1;
+  border: none;
+  border-radius: 20px;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 230px;
+  margin-top: 40px;
+  margin-bottom: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
 }
-#entrar{
-    background-color: #0e3960;
-    color: white;
+#entrar {
+  background-color: #0e3960;
+  color: white;
 }
-#entrar:hover{
-    background-color: #dde8f1;
-    color: #0e3960;
+#entrar:hover {
+  background-color: #dde8f1;
+  color: #0e3960;
 }
 
 /* cadastrar */
+
+.body-cadastro {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  height: 100vh;
+  background-color: #1c4469;
+  background-size: cover;
+} 
 .secao-cadastro {
-    float: left;
-    width: 650px;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-left: 8%;
-    margin-top: 30px;
-    box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 30px, rgba(255, 255, 255, 0.22) 0px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 485px;
+  max-width: 95%;
+  margin: auto;
+  height: 100vh;
 }
 
 .box-cadastro {
-    height: 570px;
-    padding: 45px;
-    background-color: #0e3960;
-    color: white;
+  position: relative;
+  background-color: #0e3960;
+  border-radius: 12px;
+  padding: 70px 60px 60px 60px;
+  width: 700px;
+  max-width: 500px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .box-cadastro h1 {
-    font-size: 43.7px;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 30px;
-    text-align: center;
+  font-size: 43.7px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .box-cadastro label {
-    font-weight: bold;
-    font-size: 18px;
-    text-align: left;
-    color: white;
-    margin: 10px 0 5px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  color: white;
+  margin: 10px 0 5px;
 }
-.box-cadastro .inserir{
-    color: white;
+.box-cadastro .inserir {
+  color: white;
 }
 #botao-cadastrar {
-    background-color: #dde8f1;
-    color: #0e3960;
-    border: none;
-    border-radius: 20px;
-    padding: 14px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 230px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
+  background-color: #dde8f1;
+  color: #0e3960;
+  border: none;
+  border-radius: 20px;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 230px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
 }
-#botao-cadastrar a{
-    text-decoration: none;
-    color: white;
+#botao-cadastrar a {
+  text-decoration: none;
+  color: white;
 }
-#botao-cadastrar:hover{
-    background-color: #0e3960;
-    color: white;
+#botao-cadastrar:hover {
+  background-color: #0e3960;
+  color: white;
 }
-.box-cadastro p{
-    text-align: center;
+.box-cadastro p {
+  text-align: center;
 }
-.celular{
-    font-weight: 400;
-    color: #313131;
+.celular {
+  font-weight: 400;
+  color: #313131;
 }
 
-.celular a{
-    font-weight: bold;
-    color: #0e3960;
+.celular a {
+  font-weight: bold;
+  color: #0e3960;
 }
 #mostrar {
-    color: #0e3960;
-    display: flex;
-    align-items: center; 
-    gap: 10px; 
-    flex-wrap: wrap; 
+  color: #0e3960;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 #mostrar .esqueceuSenha {
-    font-size: 15px; 
-    color: #297caf;
-    margin-left: 45px; 
-    text-decoration: none;
+  font-size: 15px;
+  color: #297caf;
+  margin-left: 45px;
+  text-decoration: none;
 }
 
 #mostrar .esqueceuSenha:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-#mostrar2{
-    color: #dde8f1;
+#mostrar2 {
+  color: #dde8f1;
 }
-.celular2{
+.celular2 {
+  font-size: 18px;
+  color: white;
+}
+.celular2 a {
+  color: white;
+  font-weight: bold;
+}
+
+.botao-voltar {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #d9e1e9; 
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.2s ease;
+}
+
+.botao-voltar i {
     font-size: 18px;
 }
-.celular2 a{
-    color: white;
-    font-weight: bold;
-}
-@media (max-width: 768px){
-    #entre{
-        color: #313131;
-    }
-    body {
-        padding: 10px;
-    }
-    #secao-login, .secao-cadastro {
-        flex-direction: column;
-        width: 90%;
-        max-width: 100%;
-    }
-    .secao-cadastro{
-        margin-left: 5%;
-        margin-top: 12%;
-    }
-    #box-login, .box-cadastro {
-        width: 100%;
-        padding: 30px;
-        height: auto;
-    }
-    #box-login h1, .box-cadastro h1 {
-        font-size: 2rem;
-    }
-    #box-login p, .box-cadastro p {
-        font-size: 1rem;
-    }
-    #entrar, #cadastrar-button, #botao-cadastrar, #botao-entrar {
-        max-width: 100%;
-        margin-top: 20px;
-    }
+
+.botao-voltar:hover {
+    color: #689ebf;
+    transform: translateX(-3px);
 }
 
-
+@media (max-width: 768px) {
+  #entre {
+    color: #313131;
+  }
+  body {
+    padding: 10px;
+  }
+  #secao-login,
+  .secao-cadastro {
+    flex-direction: column;
+    width: 90%;
+    max-width: 100%;
+  }
+  .secao-cadastro {
+    margin-left: 5%;
+    margin-top: 12%;
+  }
+  #box-login,
+  .box-cadastro {
+    width: 100%;
+    padding: 30px;
+    height: auto;
+  }
+  #box-login h1,
+  .box-cadastro h1 {
+    font-size: 2rem;
+  }
+  #box-login p,
+  .box-cadastro p {
+    font-size: 1rem;
+  }
+  #entrar,
+  #cadastrar-button,
+  #botao-cadastrar,
+  #botao-entrar {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
