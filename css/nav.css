@@ -11,11 +11,6 @@ header {
     transition: all 0.4s ease;
 }
 
-#header.ativo{
-    top: -95px;
-    opacity: 0;
-}
-
 #container {
     max-width: 1300px;
     margin: 0 auto;
@@ -120,7 +115,8 @@ a:hover{
 .user-foto {
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 100%;
+    object-fit: cover;
 }
 
 /* modal escondido por padrão */
@@ -164,6 +160,7 @@ a:hover{
     height: 60px;
     border-radius: 50%;
     font-weight: bold;
+    object-fit: cover;
 }
 
 .user-info .info h3 {
