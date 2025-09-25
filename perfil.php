@@ -84,7 +84,7 @@ $stmt_amigos->close();
     <title>Perfil de <?php echo htmlspecialchars($usuario['nome']); ?></title>
     <link rel="stylesheet" href="./css/perfil.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/feed.css">
+       <script src="./js/feed.js"></script>
 </head>
 <body>
 

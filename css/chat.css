@@ -1,112 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' );
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f4f7fa; 
+    color: #1a202c; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 #chat-container {
-  display: flex;
-  height: 100vh;
+    display: flex;
+    height: 100vh;
 }
+
+
 #amigos {
-  width: 250px;
-  border-right: 1px solid #ccc;
-  overflow-y: auto;
-  padding: 10px;
+    width: 340px;
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0; 
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
-#amigos a,
-.solicitacao {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #000;
-  padding: 8px;
-  border-radius: 6px;
-  justify-content: space-between;
+
+#amigos h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0e3960; 
+    margin: 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e2e8f0;
 }
-#amigos a:hover,
-.solicitacao:hover {
-  background: #f0f0f0;
+
+#amigos a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2d3748; 
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    font-weight: 400;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
-#amigos img,
-.solicitacao img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  margin-right: 8px;
+
+#amigos a:hover {
+    background-color: #f0f5fa; 
+    transform: translateX(5px); 
 }
+
+#amigos a.active {
+    background-color: #0e3960; 
+    color: #ffffff; 
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(14, 57, 96, 0.2); 
+}
+
+#amigos img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 16px;
+    object-fit: cover; 
+}
+
+
 #mensagens-box {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    background-color: #eef2f7; 
 }
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 26px;
+    background-color: #ffffff; 
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); 
+}
+
+.chat-header img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.chat-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0e3960;
+}
+
 #mensagens {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
+    flex: 1;
+    padding: 24px 40px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px; 
 }
+
+
 .msg {
-  margin: 5px 0;
-  padding: 8px 12px;
-  border-radius: 12px;
-  max-width: 60%;
+    padding: 16px 24px; 
+    border-radius: 22px;
+    max-width: 70%;
+    line-height: 1.6;
+    font-size: 1.1rem; 
+    word-wrap: break-word;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
 }
+
 .eu {
-  background: #0e3960;
-  color: #fff;
-  align-self: flex-end;
+    background: #0e3960; 
+    color: #fff;
+    align-self: flex-end; 
+    border-bottom-right-radius: 8px; 
 }
+
 .ele {
-  background: #e2e8f0;
-  color: #000;
-  align-self: flex-start;
+    background: #ffffff;
+    color: #2d3748;
+    align-self: flex-start; 
+    border-bottom-left-radius: 8px; 
 }
-form {
-  display: flex;
-  padding: 10px;
-  border-top: 1px solid #ccc;
+
+form#formMsg {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    border-top: 1px solid #d1d7e0;
+    background-color: #ffffff;
+    gap: 15px;
 }
-form input {
-  flex: 1;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+
+form#formMsg input {
+    flex: 1;
+    padding: 18px 26px;
+    border-radius: 28px; 
+    border: 1px solid #d1d7e0;
+    background-color: #f8fafc;
+    color: #1a202c;
+    font-size: 1.05rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
 }
-form button {
-  margin-left: 8px;
-  padding: 10px 20px;
-  border: none;
-  background: #0e3960;
-  color: #fff;
-  border-radius: 8px;
+
+form#formMsg input:focus {
+    outline: none;
+    border-color: #0e3960;
+    box-shadow: 0 0 0 3px rgba(14, 57, 96, 0.1); 
+}
+
+form#formMsg button {
+    width: 56px;
+    height: 56px;
+    border: none;
+    background: #0e3960;
+    color: #fff;
+    border-radius: 50%; 
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+form#formMsg button:hover {
+    background-color: #0c3052; 
+    transform: scale(1.05);
+}
+
+.btn-amigo {
+  background-color: #d1d7e0;
+  color: #0c3052;
+  padding: 12px 20px;
+  border: 2px solid #0c3052;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
-#adicionar-amigo {
-  display: block;
-  margin: 10px 0;
-  padding: 8px;
-  text-align: center;
-  border: 1px solid #0e3960;
-  color: #ffffff;
-  border-radius: 30px;
-  text-decoration: none;
+
+.btn-amigo:hover {
+  background-color: #0c3052; 
+  border-color: #0d47a1;
+  transform: translateY(-2px);
+  color:#eef2f7;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
 }
-#adicionar-amigo:hover {
-  background: #03335d;
-  color: rgb(0, 0, 0)
-}
-.solicitacao button {
-  margin-left: 5px;
-  padding: 4px 8px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.aceitar {
-  background-color: #0e3c66;
-  color: #fff;
-}
-.rejeitar {
-  background-color: #aaa;
-  color: #000000;
+
+.btn-amigo:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
