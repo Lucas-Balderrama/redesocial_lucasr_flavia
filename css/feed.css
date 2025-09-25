@@ -5,114 +5,6 @@
     box-sizing: border-box;
 }
 
-/* cabeçalho */
-header {
-    background-color: rgb(255, 255, 255);
-    color: #0e3960;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-#container {
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-}
-#box-img{
-    width: 180px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-}
-.logo {
-    width: 140px;
-    float: left;
-}
-#nav1{
-    margin-left: 8%;
-    display: flex;
-    justify-content: center;
-}
-#login{
-    color: #0e3960;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 600;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    text-transform: uppercase;
-}
-#user-div{
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-#opt-nome{
-    display: none;
-}
-#opt-sair{
-    background-color: rgb(255, 255, 255);
-    font-weight: 600;
-    cursor: pointer;
-}
-header nav {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content: space-around;
-}
-
-header nav ul {
-    align-items: center;
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    padding: 10px;
-}
-
-header nav ul li a {
-    color: #0e3960;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    text-transform: uppercase;
-    margin: 0 3vw;
-}
-
-a{
-    transition: color 0.3s;
-}
-
-a:hover{
-    color:#297caf;
-}
-
-
-#checkbox{
-    display: none;
-}
-
-#botao{
-    display: none;
-    font-size: 40px;
-    color:#00304D;
-    cursor: pointer;
-    float: right;
-    margin-right: 10%;
-}
-
-/* modal */
-/* botão do usuário */
 #user-btn {
     background: none;
     border: none;
@@ -126,7 +18,6 @@ a:hover{
     object-fit: cover;
 }
 
-/* modal escondido por padrão */
 .modal {
     display: none;
     position: fixed;
@@ -191,7 +82,7 @@ a:hover{
     color: black;
 }
 
-/* botão fechar (opcional) */
+/* botão fechar */
 #close-modal {
     cursor: pointer;
     font-size: 30px;
@@ -417,5 +308,9 @@ body {
     align-items: center;
     margin-bottom: 5px;
     margin-top: 5px;
+}
+
+#np-color {
+    color: #fff
 }
 /* fim publicacoes */
