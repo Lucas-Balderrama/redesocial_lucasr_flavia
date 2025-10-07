@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     if (!isset($_SESSION['id_usuario'])) {
         echo "<script>alert('Você precisa estar logado para fazer um post!');</script>";
         $_SESSION['url_anterior'] = $_SERVER['REQUEST_URI'];
-        echo "<script>window.location.href = './index.php';</script>";
+        echo "<script>window.location.href = './login.php';</script>";
         exit;
     }
 
@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                             </div>
                         </div>
                     <?php else: ?>
-                        <h3><a id="login" href="./index.php">Entrar</a></h3>
+                        <h3><a id="login" href="./login.php">Entrar</a></h3>
                     <?php endif; ?>
                 </div>
             </nav>
